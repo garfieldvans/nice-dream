@@ -8,6 +8,41 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
+const heroData = [
+  {
+    id: 1,
+    title: "Book 1",
+    description: "Description for Book 1",
+    image: "/book-thumbs.png",
+    bahasa: "Indonesia",
+    url: "https://example.com/book1",
+  },
+  {
+    id: 2,
+    title: "Book 2",
+    description: "Description for Book 2",
+    image: "/book2.png",
+    bahasa: "English",
+    url: "https://example.com/book2",
+  },
+  {
+    id: 3,
+    title: "Book 3",
+    description: "Description for Book 3",
+    image: "/book3.png",
+    bahasa: "Indonesia",
+    url: "https://example.com/book3",
+  },
+  {
+    id: 4,
+    title: "Book 4",
+    description: "Description for Book 4",
+    image: "/book4.png",
+    bahasa: "English",
+    url: "https://example.com/book4",
+  },
+];
+
 export default function HeroComponent() {
   return (
     // <div className="hero-container text-indigo-900 flex">
@@ -21,38 +56,39 @@ export default function HeroComponent() {
         autoplay={{ delay: 6000 }}
         loop={true}
       >
-        <SwiperSlide className="flex justify-center items-center w-full">
-          <div className="flex flex-row">
-            <Image
-              src="/book-thumbs.png"
-              alt="Book Thumbnail"
-              width={600}
-              height={600}
-              className="flex h-[400px] w-[400px] aspect-square object-cover"
-            />
-            <h1>slide 1</h1>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/book-thumbs.png"
-            alt="Book Thumbnail"
-            width={600}
-            height={600}
-            className="flex h-[400px] w-[400px] aspect-square object-cover"
-          />
-          <h1>slide 2</h1>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/book-thumbs.png"
-            alt="Book Thumbnail"
-            width={600}
-            height={600}
-            className="flex h-[400px] w-[400px] aspect-square object-cover"
-          />
-          <h1>slide 3</h1>
-        </SwiperSlide>
+        {heroData.map((book) => {
+          return (
+            <SwiperSlide className="flex justify-center items-center w-full">
+              <div className="flex flex-row">
+                <figure className="flex justify-center items-center h-[400px] w-[400px] aspect-square m-0">
+                  <Image
+                    src={book.image}
+                    alt={book.title}
+                    width={500}
+                    height={500}
+                    className="flex w-full h-full aspect-square object-contain"
+                    priority={false}
+                    loading="lazy"
+                  />
+                </figure>
+                <div>
+                  <h1>{book.title}</h1>
+                  <div>
+                    <p>{book.description}</p>
+                    <p>{book.bahasa}</p>
+                  </div>
+                  <div>
+                    <a href={book.url} target="_blank" rel="noopener noreferrer">
+                      <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                        Baca
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
     //   <h1 className="hero-title">Welcome to Nice Dream</h1>
