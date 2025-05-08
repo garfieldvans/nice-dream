@@ -7,41 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-
-const heroData = [
-  {
-    id: 1,
-    title: "Book 1",
-    description: "Description for Book 1",
-    image: "/book-thumbs.png",
-    bahasa: "Indonesia",
-    url: "https://example.com/book1",
-  },
-  {
-    id: 2,
-    title: "Book 2",
-    description: "Description for Book 2",
-    image: "/book2.png",
-    bahasa: "English",
-    url: "https://example.com/book2",
-  },
-  {
-    id: 3,
-    title: "Book 3",
-    description: "Description for Book 3",
-    image: "/book3.png",
-    bahasa: "Indonesia",
-    url: "https://example.com/book3",
-  },
-  {
-    id: 4,
-    title: "Book 4",
-    description: "Description for Book 4",
-    image: "/book4.png",
-    bahasa: "English",
-    url: "https://example.com/book4",
-  },
-];
+import { heroData } from "@/utils/data";
 
 export default function HeroComponent() {
   return (

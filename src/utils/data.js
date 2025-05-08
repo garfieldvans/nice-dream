@@ -13,6 +13,57 @@ export const navList = [
   },
 ];
 
+export const heroData = [
+  {
+    id: 1,
+    title: "Book 1",
+    description: "Description for Book 1",
+    image: "/book-thumbs.png",
+    author: "Author 1",
+    bahasa: "Indonesia",
+    url: "https://example.com/book1",
+    rating: 4.5,
+    badge: "Best Seller",
+    categories: ["Fiction", "Mystery"],
+  },
+  {
+    id: 2,
+    title: "Book 2",
+    description: "Description for Book 2",
+    image: "/book2.png",
+    author: "Author 2",
+    bahasa: "English",
+    url: "https://example.com/book2",
+    rating: 3.8,
+    badge: "New Release",
+    categories: ["Fantasy", "Adventure"],
+  },
+  {
+    id: 3,
+    title: "Book 3",
+    description: "Description for Book 3",
+    image: "/book3.png",
+    author: "Author 3",
+    bahasa: "Indonesia",
+    url: "https://example.com/book3",
+    rating: 4.0,
+    badge: "Popular",
+    categories: ["Science Fiction", "Dystopian"],
+  },
+  {
+    id: 4,
+    title: "Book 4",
+    description: "Description for Book 4",
+    image: "/book4.png",
+    author: "Author 4",
+    bahasa: "English",
+    url: "https://example.com/book4",
+    rating: 4.2,
+    badge: "Best Seller",
+    categories: ["Romance", "Contemporary"],
+  },
+];
+
 export const categoryData = [
   { id: 1, label: "General Fiction", url: "general-fiction" },
   { id: 2, label: "Romance", url: "romance" },
